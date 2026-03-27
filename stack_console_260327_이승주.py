@@ -1,11 +1,11 @@
 # 메뉴
-def print_menu():
+def print_Menu():
     print("=" * 50)
     print("\t1.Push\t2.Pop\t3.Peek\t0.Exit")
     print("=" * 50)
 
 # 스택에 값 추가
-def stack_push(stack):
+def stack_Push(stack):
     if stack_IsFull(stack):
         return
     else:
@@ -14,7 +14,7 @@ def stack_push(stack):
         print(f"> 현재 스택 상태 {stack}")
 
 # 스택에서 값 뽑기
-def stack_pop(stack):
+def stack_Pop(stack):
     if stack_IsEmpty(stack):
         return
     else:
@@ -23,7 +23,7 @@ def stack_pop(stack):
         print(f"> 현재 스택 상태 {stack}")
 
 # 스택의 top의 값 보기
-def stack_peek(stack):
+def stack_Peek(stack):
     if stack_IsEmpty(stack):
         return
     else:
@@ -52,17 +52,17 @@ def stack_IsFull(stack):
 stack = []
 
 while True:
-    print_menu()
+    print_Menu()
     choice = int(input("> 메뉴 선택 : "))
     match choice:
         case 1:
-            stack_push(stack)
+            stack_Push(stack)
             print()
         case 2:
-            stack_pop(stack)
+            stack_Pop(stack)
             print()
         case 3:
-            stack_peek(stack)
+            stack_Peek(stack)
             print()
         case 0:
             break
